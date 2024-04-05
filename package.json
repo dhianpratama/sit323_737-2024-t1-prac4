@@ -1,0 +1,27 @@
+{
+  "name": "sit323_737-2024-t1-prac4",
+  "version": "1.0.0",
+  "description": "Basic API(s) for math",
+  "main": "app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "test": "jasmine"
+  },
+  "author": "Dhian",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.3",
+    "express-winston": "^4.2.0",
+    "http-status": "^1.7.4",
+    "joi": "^17.12.3",
+    "lodash": "^4.17.21",
+    "winston": "^3.13.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-standard": "^17.1.0",
+    "jasmine": "^5.1.0",
+    "jasmine-reporters": "^2.5.2",
+    "supertest": "^6.3.4"
+  }
+}
