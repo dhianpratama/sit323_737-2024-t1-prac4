@@ -24,9 +24,30 @@ const divide = (req, res) => {
   res.send({ result })
 }
 
+const power = (req, res) => {
+  const { num1, num2 } = req.body
+  const result = mathService.power(num1, num2)
+  res.send({ result })
+}
+
+const squareRoot = (req, res) => {
+  const { num1 } = req.body
+  const result = mathService.squareRoot(num1)
+  res.send({ result })
+}
+
+const modulo = (req, res) => {
+  const { num1, num2 } = req.body
+  const result = mathService.modulo(num1, num2)
+  res.send({ result })
+}
+
 module.exports = {
   add,
   substract,
   multiply,
-  divide
+  divide,
+  power,
+  squareRoot,
+  modulo
 }
