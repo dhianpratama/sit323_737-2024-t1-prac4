@@ -1,8 +1,8 @@
-const express = require('express');
+const express = require('express')
 const mathRoute = require('./math.route')
 
-const router = express.Router();
+const router = express.Router()
 
 router.use('/math', mathRoute)
 
-module.exports = router;
+module.exports = router

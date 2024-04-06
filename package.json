@@ -5,7 +5,9 @@
   "main": "app.js",
   "scripts": {
     "start": "node src/app.js",
-    "test": "jasmine"
+    "test": "jasmine",
+    "lint": "./node_modules/.bin/eslint .",
+    "lint:fix": "./node_modules/.bin/eslint --fix ."
   },
   "author": "Dhian",
   "license": "ISC",
@@ -20,6 +22,9 @@
   "devDependencies": {
     "eslint": "^8.57.0",
     "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-promise": "^6.1.1",
     "jasmine": "^5.1.0",
     "jasmine-reporters": "^2.5.2",
     "supertest": "^6.3.4"

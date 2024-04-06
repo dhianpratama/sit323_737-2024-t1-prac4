@@ -10,10 +10,10 @@ const httpStatus = require('http-status')
 const app = express()
 
 // parse json request body
-app.use(express.json());
+app.use(express.json())
 
 // parse urlencoded request body
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }))
 
 // configuration to log http request automatically
 app.use(expressWinston)
@@ -22,7 +22,7 @@ app.use(expressWinston)
 app.get('/', (_, res) => res.send('Math API v1.0'))
 
 // api routes
-app.use(routes);
+app.use(routes)
 
 // Handler error for other url/path. Not found.
 app.use('*', (_, res) => {
@@ -30,12 +30,11 @@ app.use('*', (_, res) => {
 })
 
 // handle error
-app.use(errorHandler);
+app.use(errorHandler)
 
 // Run express app
 app.listen(config.PORT, () => {
   logger.info(`App listening on port ${config.PORT}!`)
 })
-
 
 module.exports = app
