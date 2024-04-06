@@ -16,7 +16,7 @@ This project uses the following environment variables:
 ## Getting started
 Clone the repository
 ```
-git clone https://github.com/dhianpratama/sit323_737-2024-t1-prac2p
+git clone git@github.com:dhianpratama/sit323_737-2024-t1-prac4.git
 ```
 Install dependencies
 ```
