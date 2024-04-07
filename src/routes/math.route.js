@@ -7,7 +7,7 @@ const router = express.Router()
 
 // API(s) for Task 4.1P
 router.post('/add', validate(validation.add), controller.add)
-router.post('/substract', validate(validation.substract), controller.substract)
+router.post('/subtract', validate(validation.subtract), controller.subtract)
 router.post('/multiply', validate(validation.multiply), controller.multiply)
 router.post('/divide', validate(validation.divide), controller.divide)
 

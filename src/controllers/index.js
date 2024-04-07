@@ -6,9 +6,9 @@ const add = (req, res) => {
   res.send({ result })
 }
 
-const substract = (req, res) => {
+const subtract = (req, res) => {
   const { num1, num2 } = req.body
-  const result = mathService.substract(num1, num2)
+  const result = mathService.subtract(num1, num2)
   res.send({ result })
 }
 
@@ -44,7 +44,7 @@ const modulo = (req, res) => {
 
 module.exports = {
   add,
-  substract,
+  subtract,
   multiply,
   divide,
   power,

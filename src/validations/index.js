@@ -7,7 +7,7 @@ const add = {
   })
 }
 
-const substract = {
+const subtract = {
   body: Joi.object().keys({
     num1: Joi.number().required(),
     num2: Joi.number().required()
@@ -50,7 +50,7 @@ const modulo = {
 
 module.exports = {
   add,
-  substract,
+  subtract,
   multiply,
   divide,
   power,
