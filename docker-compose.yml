@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  mathapi:
+    build: ./
+    restart: always
+    ports:
+      - 80:3000
+    environment:
+      - PORT=3000
+      - APP_SERVICE_NAME=calculator-service
