@@ -7,26 +7,32 @@ spec:
    replicas: 1
    selector:
       matchLabels:
-         bb: web
+         app: math-api
    template:
       metadata:
          labels:
-            bb: web
+            app: math-api
       spec:
          containers:
-            - name: math-api-site
-              image: us-central1-docker.pkg.dev/sit737-24t1-pratama-8bf0e47/sit737-mathapi/sit737-mathapi
-              imagePullPolicy: IfNotPresent
+            -  name: math-api
+               image: us-central1-docker.pkg.dev/sit737-24t1-pratama-8bf0e47/sit737/mathapi
+               imagePullPolicy: IfNotPresent
+               ports:
+                  - containerPort: 3000
+         restartPolicy: Always
+
 ---
+
 apiVersion: v1
 kind: Service
 metadata:
    name: math-api-service
    namespace: sit737
 spec:
-   type: NodePort
-   selector:
-      bb: web
-   ports:
-      - port: 3005
+  selector:
+      app: math-api
+  ports:
+      - protocol: TCP
+        port: 3005
         targetPort: 3000
+  type: LoadBalancer
