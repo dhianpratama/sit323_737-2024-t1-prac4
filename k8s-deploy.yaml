@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+   name: math-api
+   namespace: sit737
+spec:
+   replicas: 1
+   selector:
+      matchLabels:
+         bb: web
+   template:
+      metadata:
+         labels:
+            bb: web
+      spec:
+         containers:
+            - name: math-api-site
+              image: us-central1-docker.pkg.dev/sit737-24t1-pratama-8bf0e47/sit737-mathapi/sit737-mathapi
+              imagePullPolicy: IfNotPresent
+---
+apiVersion: v1
+kind: Service
+metadata:
+   name: math-api-service
+   namespace: sit737
+spec:
+   type: NodePort
+   selector:
+      bb: web
+   ports:
+      - port: 3005
+        targetPort: 3000
