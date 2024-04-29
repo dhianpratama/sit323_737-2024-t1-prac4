@@ -15,7 +15,7 @@ spec:
       spec:
          containers:
             -  name: math-api
-               image: us-central1-docker.pkg.dev/sit737-24t1-pratama-8bf0e47/sit737/mathapi
+               image: us-central1-docker.pkg.dev/sit737-24t1-pratama-8bf0e47/sit737/mathapi:1.0.0
                imagePullPolicy: IfNotPresent
                ports:
                   - containerPort: 3000
