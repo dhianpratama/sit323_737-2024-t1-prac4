@@ -6,8 +6,6 @@ const { errorHandler } = require('./middleware/error')
 const { logger, expressWinston } = require('./utils')
 const httpStatus = require('http-status')
 
-const packageJson = require('../package.json')
-
 // Initiate express instance
 const app = express()
 
@@ -21,6 +19,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(expressWinston)
 
 // Default response for default url
+const packageJson = require('../package.json')
 app.get('/', (_, res) => res.send(`Math API version ${packageJson.version}`))
 
 // api routes
